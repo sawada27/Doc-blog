@@ -104,3 +104,22 @@
 1 str.Remove（其实位置，移出数）;
 2 s.Remove(3,2);
 ```
+# 关于stringbuilder
+```
+　　StringBuilder sb=new StringBuilder(”Hello,Welcome”,100);//初始化对象并设置初始容量为100
+       sb.Append(” to www.sinory.com”);
+       sb.Replace(old,new);//将old替换为new,作用与String.Replace()一样只是不需要在过程中复制字符。
+
+
+　　StringBuilder的成员：
+     　　StringBuilder sb=new StringBuilder(”www.google.com”);//定义初值为www.google.com的对象。
+     　　StringBuilder sb=new StringBuilder(20);//初始化容量为20的空对象。
+　　另外StringBuilder还有MaxCapacity属性用来限定对象可以使用的最大容量。默认大约是int.MaxValue（20亿）
+     可以在使用过程中定义sb.MaxCapacity=value;
+     sb.Append()——给当前字符串追加字符串。
+     sb.AppendFormat()——添加特定格式的字符串
+     sb.Insert()——插入一个子字符串
+     sb.Remove()——从当前字符串删除字符
+     sb.Replace()——替换字符串中指定的字符
+     sb.ToString()——将sb转化为String 对象
+```
