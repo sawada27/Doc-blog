@@ -1,0 +1,5 @@
+using (var db = new System.Data.Entity.DbContext())
+{
+var query = db.object.Where(o => o.A == "1" && o.B == "1");
+var sql = ((System.Data.Entity.Infrastructure.DbQuery<object>)query).ToString();
+}
