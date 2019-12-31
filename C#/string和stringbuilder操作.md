@@ -1,6 +1,6 @@
 # 截取 
 ```
-  1  string str3 = "123abc456";
+ 1  string str3 = "123abc456";
  2 
  3  //str3 = str3.Substring(0, i);  //从左边开始取字符串的前i个字符(str3 = str3.Remove(i, str3.Length - i);)
  4  str3 = str3.Substring(0, 3);
@@ -36,7 +36,7 @@
 14             
 15   //TrimEnd的方法和TrimStart原理一样不多赘述
 16   string str2 = " I Believe You Very Much! ";
-17   str = str2.TrimEnd();                                   //截取掉字符串首部和尾部的空格
+17   str = str2.TrimEnd();                                   //截取掉字符串尾部的空格
 18   //输出：" I Believe You Very Much!"
 ```
 # 替换
