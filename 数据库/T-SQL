@@ -1,0 +1,30 @@
+SELECT * FROM ticketmanage.ticket;
+
+CREATE TABLE `ticket` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `subid` varchar(36) COLLATE utf8mb4_bin DEFAULT NULL,
+  `subName` varchar(256) COLLATE utf8mb4_bin DEFAULT NULL,
+  `title` longtext COLLATE utf8mb4_bin NOT NULL,
+  `details` longtext COLLATE utf8mb4_bin,
+  `staffName` varchar(256) COLLATE utf8mb4_bin DEFAULT NULL,
+  `Status` int(11) DEFAULT '1',
+  `CreatedDate` datetime DEFAULT NULL,
+  `LastUpdated` datetime DEFAULT NULL,
+  `reason` longtext COLLATE utf8mb4_bin,
+  `filesname` longtext COLLATE utf8mb4_bin,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+alter table ticket add column filesname longtext;
+
+
+use zzytest;
+create table test1(
+ID int UNSIGNED not null  AUTO_INCREMENT,
+uname varchar(255) not null,
+upasswd varchar(255) not null,
+PRIMARY KEY(ID));
+drop table test;
+
+INSERT test1(ID,uname,upasswd) values(1,"zzy","zzy"),(2,"zzq","zzq");
+select * from test1;
