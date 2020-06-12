@@ -1,0 +1,44 @@
+// 水平居中
+display:flex；
+justify-content: space-around;
+
+// 垂直居中
+display:flex;
+align-items:content;
+
+// 水平垂直居中
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+//父级
+display:flex;
+//子级
+align-self:flex-start;  // 居上对齐
+align-self:flex-end;    // 居下对齐
+align-self:center;      // 居中对齐
+margin:auto;            // 水平垂直居中
+flex:1; //(这里数字可以随便填) //占整块的多少个
+
+
+// align-items //注解 子元素侧轴对齐
+align-items:flex-start; // (默认) 元素在开始位置 富裕空间占据另一侧
+align-items:flex-end; // 富裕空间在开始位置 元素占据另一侧
+align-items:center; // 元素居中 富裕空间 平分左右两侧
+
+
+
+// flex-direction 自动填补空白
+// 父级
+display:flex;
+flex-direction: row;    // 横向自动填补空白（二选一）
+flex-direction: column; // 纵向自动填补空白（二选一）
+//子级
+flex:1;
+
+
+flex-direction  // 注解
+flex-direction:row; // 主轴与行内轴方向作为默认的书写模式。即横向从左到右排列（左对齐）。
+flex-direction:row-reverse;// 对齐方式与row相反。
+flex-direction:column; // 主轴与块轴方向作为默认的书写模式。即纵向从上往下排列（顶对齐）。
+flex-direction:column-reverse; // 对齐方式与column相反。
