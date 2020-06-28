@@ -1,9 +1,9 @@
 using System;
 using Newtonsoft.Json.Linq;
 
-namespace ChatPay
+namespace DemoStudy
 {
-    class JsonStudy
+    class DemoStudy
     {
         public void demo()
         {
