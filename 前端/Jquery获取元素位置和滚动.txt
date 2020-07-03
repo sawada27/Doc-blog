@@ -1,0 +1,37 @@
+jquery获取html元素的绝对位置坐标和相对父元素的位置坐标方法：
+
+
+　　绝对位置坐标：
+　　$("#elem").offset().top
+　　$("#elem").offset().left
+
+
+　　相对父元素的位置坐标：
+　　$("#elem").position().top
+　　$("#elem").position().left
+
+　　另：
+　　static(默认):默认定位方式。
+　　relative(相对定位):在static的基础上，相对元素本来的位置变化，通过设定top,bottom,left,right实现。
+　　absolute(绝对定位):是相对父元素来说的，如果父元素中有relative，那么该元素的位置是经过计算后的结果。即absolute定位的参照物是“上一个定位过的父元素(static不算)”。绝对定位会使元素从文档流中被删除。
+　　fixed(固定定位):fixed定位的参照物总是当前的文档。利用fixed定位，很容易让一个div定位在浏览器文档的左上，右上等方位。
+  
+  
+  在默认情况下，页面加载完后默认滚动在最顶端，有些时候我们需要在页面打开后，定位滚动条的位置，比如，横向和纵向滚动条居中，实现页面滚动的方法有三种：scroll、scrollBy和 scrollTo，三个方法都带两个参数：x(X轴上的偏移量)和y(Y轴上的偏移量)。因此我们只需修改x,y的偏移量来设置滚动条的位置。另外，页面的滚动高度必须在网页加载完成后才能获取到，所以触发事件用onload。
+
+方法一：用scroll方法实现滚动条位于最底端。
+
+1
+<body onload="scroll(0,document.body.scrollHeight) ">
+方法二：用scrollBy方法实现滚动条位于最右端。
+
+1
+<body onload="scrollBy(document.body.scrollWidth，0) ">
+方法三：用scrollTo方法实现水平滚动条和纵向滚动条均居中。
+
+1
+<body onload="scrollTo(document.body.scrollWidth/2,document.body.scrollHeight/2)">
+虽然使用scroll、scrollBy和scrollTo方法的效果一样，但是彼此之间还是有一些区别的。 经测试如果使用某一确定的位置参数时，不需要带单位，例据顶端300像素:
+
+1
+<body onload="scroll(0,300) ">
