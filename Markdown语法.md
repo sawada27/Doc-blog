@@ -85,4 +85,8 @@ C --> |Two| E[iPhone]
     - [X] 第三
 - [ ] 第四
 
+# 强调 按键
+```
+使<b>用</b> <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启<em>电脑</em>
+```
 使<b>用</b> <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启<em>电脑</em>
